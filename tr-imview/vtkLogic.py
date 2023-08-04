@@ -102,7 +102,7 @@ def buildVolumeRenderer(reader):
     volume.SetProperty(volumeProperty)
 
     ren1.AddVolume(volume)
-    ren1.SetBackground(colors.GetColor3d('Wheat'))
+    ren1.SetBackground(colors.GetColor3d('Black'))
     ren1.ResetCameraClippingRange()
     ren1.ResetCamera()
     return renWin
