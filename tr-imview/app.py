@@ -27,7 +27,8 @@ CURRENT_DIRECTORY = os.path.abspath(os.path.dirname(__file__))
 # VTK pipeline
 # -----------------------------------------------------------------------------
 reader = vtkLogic.readData(os.path.join(CURRENT_DIRECTORY, "../DATA/example.vti"))
-volRenWindow = vtkLogic.buildVolumeRenderer(reader)
+renderWindow = vtkLogic.getVolumeRenderWindow(reader)
+# renderWindow = vtkLogic.getResliceRenderWindow3(reader)
 
 
 # -----------------------------------------------------------------------------
@@ -67,7 +68,8 @@ with SinglePageLayout(server) as layout:
             fluid=True,
             classes="pa-0 fill-height",
         ):
-            view = vtk.VtkLocalView(volRenWindow)
+            view = vtk.VtkLocalView(renderWindow)
+            # view = vtk.VtkRemoteView(renderWindow)
 
 
 # -----------------------------------------------------------------------------

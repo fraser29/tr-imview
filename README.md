@@ -15,4 +15,9 @@ pip install trame-vuetify trame-vtk # Install widgets that we'll be using
 pip install "vtk"
 ```
 
+## run
 
+```bash
+source ./venv/bin/activate
+python tr-imview/tr-imview/app.py 
+```
